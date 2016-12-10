@@ -1,0 +1,18 @@
+p#notice = notice
+
+p
+  strong Hall:
+  = @seance.hall_id
+p
+  strong Movie:
+  = @seance.movie_id
+p
+  strong Datetime:
+  = @seance.datetime
+p
+  strong Price:
+  = @seance.price
+
+= link_to 'Edit', edit_seance_path(@seance)
+'|
+= link_to 'Back', seances_path

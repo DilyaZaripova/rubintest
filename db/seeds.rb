@@ -1,7 +1,40 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+Ticket.delete_all
+Ticket.reset_pk_sequence
+Ticket.create(
+    [
+        {user_id: 1, seance_id: 1, status_id: 1, number: 34}
+    ]
+)
+
+Status.delete_all
+Status.reset_pk_sequence
+Status.create(
+    [
+        {name: 'Забронирован'},
+        {name: 'Куплен'}
+    ]
+)
+
+Seance.delete_all
+Seance.reset_pk_sequence
+Seance.create(
+    [
+        {hall_id: 1, movie_id: 3, datetime: '--', price: 300}
+    ]
+)
+
+Hall.delete_all
+Hall.reset_pk_sequence
+Hall.create(
+    [
+        {name: '3D'}
+    ]
+)
+
+Movie.delete_all
+Movie.reset_pk_sequence
+Movie.create(
+    [
+        {name: 'Рассвет мертвецов', genre: 'Ужасы', director: 'John Walles', description: 'В г. К. обнаружилось заражение...'}
+    ]
+)

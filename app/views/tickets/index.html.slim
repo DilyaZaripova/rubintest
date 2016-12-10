@@ -1,0 +1,27 @@
+h1 Listing tickets
+
+table
+  thead
+    tr
+      th User
+      th Seance
+      th Status
+      th Number
+      th
+      th
+      th
+
+  tbody
+    - @tickets.each do |ticket|
+      tr
+        td = ticket.user_id
+        td = ticket.seance_id
+        td = ticket.status_id
+        td = ticket.number
+        td = link_to 'Show', ticket
+        td = link_to 'Edit', edit_ticket_path(ticket)
+        td = link_to 'Destroy', ticket, data: { confirm: 'Are you sure?' }, method: :delete
+
+br
+
+= link_to 'New Ticket', new_ticket_path

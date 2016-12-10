@@ -1,0 +1,27 @@
+h1 Listing seances
+
+table
+  thead
+    tr
+      th Hall
+      th Movie
+      th Datetime
+      th Price
+      th
+      th
+      th
+
+  tbody
+    - @seances.each do |seance|
+      tr
+        td = seance.hall_id
+        td = seance.movie_id
+        td = seance.datetime
+        td = seance.price
+        td = link_to 'Show', seance
+        td = link_to 'Edit', edit_seance_path(seance)
+        td = link_to 'Destroy', seance, data: { confirm: 'Are you sure?' }, method: :delete
+
+br
+
+= link_to 'New Seance', new_seance_path

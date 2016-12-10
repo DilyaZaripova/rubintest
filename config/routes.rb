@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  resources :movies
+  resources :halls
+  resources :seances
+  resources :statuses
+  resources :tickets
+  resources :users
   root 'main#index'
 
   get 'main/index'
