@@ -10,13 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161210214201) do
+ActiveRecord::Schema.define(version: 20161211091335) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "halls", force: :cascade do |t|
     t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "images", force: :cascade do |t|
+    t.string   "name"
+    t.string   "file"
+    t.float    "ave_value"
+    t.integer  "theme_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -41,6 +50,13 @@ ActiveRecord::Schema.define(version: 20161210214201) do
 
   create_table "statuses", force: :cascade do |t|
     t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "themes", force: :cascade do |t|
+    t.string   "name"
+    t.integer  "qty_items"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
