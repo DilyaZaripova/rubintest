@@ -1,12 +1,9 @@
 Rails.application.routes.draw do
+  resources :users
+  resources :values
   resources :images
   resources :themes
-  resources :movies
-  resources :halls
   resources :seances
-  resources :statuses
-  resources :tickets
-  resources :users
   root 'main#index'
 
   get 'main/index'

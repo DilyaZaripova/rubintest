@@ -10,16 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161211091335) do
+ActiveRecord::Schema.define(version: 20161215153722) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
-
-  create_table "halls", force: :cascade do |t|
-    t.string   "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
 
   create_table "images", force: :cascade do |t|
     t.string   "name"
@@ -28,15 +22,6 @@ ActiveRecord::Schema.define(version: 20161211091335) do
     t.integer  "theme_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-  end
-
-  create_table "movies", force: :cascade do |t|
-    t.string   "name"
-    t.string   "genre"
-    t.string   "director"
-    t.text     "description"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
   end
 
   create_table "seances", force: :cascade do |t|
@@ -48,12 +33,6 @@ ActiveRecord::Schema.define(version: 20161211091335) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "statuses", force: :cascade do |t|
-    t.string   "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "themes", force: :cascade do |t|
     t.string   "name"
     t.integer  "qty_items"
@@ -61,18 +40,18 @@ ActiveRecord::Schema.define(version: 20161211091335) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "tickets", force: :cascade do |t|
-    t.integer  "user_id"
-    t.integer  "seance_id"
-    t.integer  "status_id"
-    t.integer  "number"
+  create_table "users", force: :cascade do |t|
+    t.string   "name"
+    t.string   "surname"
+    t.string   "email"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "users", force: :cascade do |t|
-    t.string   "name"
-    t.string   "email"
+  create_table "values", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "image_id"
+    t.integer  "value"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
