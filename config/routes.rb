@@ -3,7 +3,6 @@ Rails.application.routes.draw do
   resources :values
   resources :images
   resources :themes
-  resources :seances
   root 'main#index'
 
   get 'main/index'

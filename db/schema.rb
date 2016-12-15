@@ -24,15 +24,6 @@ ActiveRecord::Schema.define(version: 20161215153722) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "seances", force: :cascade do |t|
-    t.integer  "hall_id"
-    t.integer  "movie_id"
-    t.date     "datetime"
-    t.integer  "price"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "themes", force: :cascade do |t|
     t.string   "name"
     t.integer  "qty_items"
