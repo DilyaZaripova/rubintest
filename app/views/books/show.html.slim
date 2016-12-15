@@ -1,0 +1,27 @@
+p#notice = notice
+
+p
+  strong User:
+  = @book.user_id
+p
+  strong Image:
+  = @book.image_id
+p
+  strong Genre:
+  = @book.genre_id
+p
+  strong Name:
+  = @book.name
+p
+  strong Author:
+  = @book.author
+p
+  strong Description:
+  = @book.description
+p
+  strong Release:
+  = @book.release
+
+= link_to 'Edit', edit_book_path(@book)
+'|
+= link_to 'Back', books_path

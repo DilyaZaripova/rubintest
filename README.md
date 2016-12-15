@@ -24,7 +24,6 @@
 |      | user_id   |          |
 |     | image_id   |          |
 |     | genre_id   |          |
-|     | review_id   |          |
 |     | name   |          |
 |     | author   |          |
 |     | description   |          |
@@ -33,4 +32,5 @@
 |       | name |          |
 | review |     |          |
 |        | user_id |          |
+|        | book_id |          |
 |        | text |          |
