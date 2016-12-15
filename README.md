@@ -1,24 +1,35 @@
-# README
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+# Описание проекта
+Приложение для публикации книг разных жанров, их оценки, с возможностью размещения отзывов.
+Зарегистрированный пользователь может добавлять книги, искать по заданным  параметрам, оценивать их и оставлять отзывы.
+| table  | field  |  comment |
+| ------ | ------ |  ------- |
+| user   |        |          |
+|        | name   |          |
+|        | surname   |          |
+|        | email   |          |
+| value |         |          |
+|       | user_id   |          |
+|       | image_id   |          |
+|       | value    |          |
+| image |   |          |
+|    | name    |          |
+|    | file   |          |
+|    | ave_value   |          |
+|    | theme_id   |          |
+| theme |       |          |
+|       | name |          |
+|       | qty_items |          |
+| book |         |          |
+|      | user_id   |          |
+|     | image_id   |          |
+|     | genre_id   |          |
+|     | review_id   |          |
+|     | name   |          |
+|     | author   |          |
+|     | description   |          |
+|     | release   |          |
+| genre |      |          |
+|       | name |          |
+| review |     |          |
+|        | user_id |          |
+|        | text |          |
