@@ -53,5 +53,9 @@ gem 'bootstrap-sass'
 gem 'font-awesome-sass'
 gem 'sass'
 gem 'pg'
-gem 'rspec-rails'
+
+group :test, :development do
+  gem 'rspec-rails'
+  gem 'shoulda-matchers'
+end
 gem 'activerecord-reset-pk-sequence'
