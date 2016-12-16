@@ -16,4 +16,8 @@ RSpec.describe Image, type: :model do
     subject.file = nil
     expect(subject).to_not be_valid
   end
+  it 'has one Theme' do
+    asso = described_class.reflect_on_association(:theme)
+    expect(asso.macro).to eq :belongs_to
+  end
 end
