@@ -3,9 +3,10 @@ $ ->
     $.get
       url: "/works/#{$('select').val()}"
       success: (data) ->
-        box = $ '#images'
+        box = $ '.carousel-inner'
         box.empty()
         data.forEach (file) ->
-          box.append "<img src=/assets/pictures/#{file}>"
+          box.append "<div class='item'><img src='/assets/pictures/#{file}'></div>"
+        $($('.item')[0]).addClass('active')
   $('select').change change_trigger
   change_trigger $('select')
