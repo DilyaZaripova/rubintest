@@ -3,7 +3,7 @@ class User < ApplicationRecord
   has_many :book
   has_many :review
 
-  validates_associated :value, :book, :review
+  validates_associated :book, :review
   validates :name,  :presence => true,
                     :length => {:minimum => 1, :maximum => 254}
   validates :surname,  :presence => true,
@@ -11,5 +11,5 @@ class User < ApplicationRecord
   validates :email, :presence => true,
                     :uniqueness => true,
                     :length => {:minimum => 3, :maximum => 254},
-                    :format => {:with => /^([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})$/i}
+                    :format => {:with => /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/i}
 end

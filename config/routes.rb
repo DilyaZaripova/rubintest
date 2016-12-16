@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  root to: 'works#index'
+  # get '/works/(:id)' => 'works#select_images'
   resources :books
   resources :reviews
   resources :genres

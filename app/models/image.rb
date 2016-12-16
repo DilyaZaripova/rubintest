@@ -4,5 +4,5 @@ class Image < ApplicationRecord
   has_many :value
 
   validates_presence_of :name, :file
-  validates_associated :theme, :book, :value
+  validates_associated :theme, :book
 end
