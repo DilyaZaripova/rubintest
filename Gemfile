@@ -59,3 +59,8 @@ group :test, :development do
   gem 'shoulda-matchers'
 end
 gem 'activerecord-reset-pk-sequence'
+
+group :production do
+  # For Heroku deployment
+  gem 'rails_12factor'
+end
