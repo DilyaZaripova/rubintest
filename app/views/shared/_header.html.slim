@@ -1,7 +1,30 @@
-div.navbar.navbar-default.navbar-static-top
-  div.navbar-header
-    ul.nav.nav-pills
-      li role="presentation" = link_to 'Главная', main_index_path
-      li role="presentation" = link_to 'О нас', main_about_path
-      li role="presentation" = link_to 'Контакты', main_contacts_path
-      li role="presentation" = link_to 'Помощь', main_help_path
+navbar-header
+  nav.navbar.navbar-default
+    .container-fluid
+        .navbar-brand =link_to 'Rubin', root_path
+        ul.nav.navbar-nav
+          li.active =link_to 'Main', root_path
+          li =link_to 'About', main_about_path
+          li =link_to 'Contacts', main_contacts_path
+          li =link_to 'Help', main_help_path
+        ul.nav.navbar-nav.navbar-right
+          - if signed_in?
+            li.signed
+            //  = gravatar_for current_user
+            li#fat-menu.dropdown
+              a.dropdown-toggle{data-toggle = "dropdown" href = "#"}
+                span
+                  = current_user.name
+                  = ' '
+                b.caret
+              ul.dropdown-menu
+                li= link_to 'Profile', current_user
+                li= link_to 'Settings', '#'
+                li.divider
+                li
+                  = link_to 'Sign out', signout_path, method: :delete
+          - else
+            li
+              = link_to 'Sign in', signin_path
+            li
+              = link_to 'Sign up', signup_path

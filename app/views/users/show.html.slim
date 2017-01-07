@@ -1,14 +1,18 @@
 p#notice = notice
 
-p
-  strong Name:
-  = @user.name
-p
-  strong Surname:
-  = @user.surname
-p
-  strong Email:
-  = @user.email
+.show_user
+  .row
+    aside.span4
+      section
+        h1
+          //= gravatar_for @user
+          //Применение пакета Gravatar
+          = @user.name
+
+  p
+    = @user.email
+
+  = link_to :work, works_index_path, class: "btn btn-lg btn-primary"
 
 = link_to 'Edit', edit_user_path(@user)
 '|

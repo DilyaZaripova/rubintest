@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get '/signup' => 'users#new', as: 'signup'
+  get '/signin' => 'sessions#new', as: 'signin'
+  delete '/signout' => 'sessions#destroy', as: 'signout'
+
   get 'works/index' => 'works#index', via:'get'
 
   #get 'works/select_images'
@@ -13,7 +17,9 @@ Rails.application.routes.draw do
   resources :values
   resources :images
   resources :themes
-  root 'main#index'
+
+  resources :sessions, only: [:new, :create, :destroy]
+  root to: 'main#index'
 
   get 'main/index'
 

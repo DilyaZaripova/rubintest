@@ -1,0 +1,19 @@
+- content_for(:title, 'Log in')
+.content
+h1 Sign in
+
+.row-fluid
+  .span6.offset3
+    = form_for(:session, url: sessions_path) do |f|
+      .field
+        = f.label :email
+        = f.text_field :email
+      .field
+        = f.label :password
+        = f.password_field :password
+      .actions
+        = f.submit 'Sign in', class: 'btn btn-large btn-primary'
+    p.sign_up_link
+      = 'Aren`t sign in?'
+      br
+      = link_to 'Sign up', signup_path

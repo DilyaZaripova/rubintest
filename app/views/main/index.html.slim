@@ -1,6 +1,9 @@
-.h1.text-center  Главная
-ul
-  li = link_to 'О нас', main_about_path
-  li = link_to 'Контакты', main_contacts_path
-  li = link_to 'Помощь', main_help_path
+.center.jumbotron
+  //h1 Welcome to the Rubintest
+  h2 Ruby on Rails sample application.
 
+  - if signed_in?
+    = link_to 'Proceed to work!', works_index_path, class: 'btn btn-lg btn-primary'
+
+  - else
+    = link_to 'Sign up now!', signup_path, class: 'btn btn-lg btn-primary'
