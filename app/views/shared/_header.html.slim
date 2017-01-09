@@ -10,7 +10,7 @@ navbar-header
         ul.nav.navbar-nav.navbar-right
           - if signed_in?
             li.signed
-            //  = gravatar_for current_user
+              .gravatar= gravatar_for current_user
             li#fat-menu.dropdown
               a.dropdown-toggle{data-toggle = "dropdown" href = "#"}
                 span
