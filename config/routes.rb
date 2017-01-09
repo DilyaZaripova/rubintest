@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root to: 'main#index'
   get '/signup' => 'users#new', as: 'signup'
   get '/signin' => 'sessions#new', as: 'signin'
   delete '/signout' => 'sessions#destroy', as: 'signout'
@@ -19,7 +20,6 @@ Rails.application.routes.draw do
   resources :themes
 
   resources :sessions, only: [:new, :create, :destroy]
-  root to: 'main#index'
 
   get 'main/index'
 

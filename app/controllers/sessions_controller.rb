@@ -1,5 +1,5 @@
 class SessionsController < ApplicationController
-  skip_before_action :ensure_login, only: [:new, :create]
+  #skip_before_action :ensure_login, only: [:new, :create]
   def new
   end
   # "Создаем" логин (при входе пользователя)
@@ -15,8 +15,7 @@ class SessionsController < ApplicationController
       else
         # Create an error message and re-render the signin form.
         # доступ к значениям в этом же запросе
-        flash.now[:alert] = 'Login failed. Invalid email/password combination. Repeat'
-        render action: 'new'
+        redirect_to signin_path, alert: 'Login failed. Invalid email/password combination. Repeat'
       end
     end
   end

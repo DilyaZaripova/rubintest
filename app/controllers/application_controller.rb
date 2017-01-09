@@ -3,10 +3,10 @@ class ApplicationController < ActionController::Base
   #add Sessions module
   include SessionsHelper
   # фильтр - прерывание цикла запроса
-  before_action :ensure_login
+  #before_action :ensure_login
 
-  protected
-  def ensure_login
-    redirect_to signin_path unless cookies[:remember_token]
-  end
+  #protected
+  #def ensure_login
+    #redirect_to signin_path unless cookies[:remember_token]
+  #end
 end
