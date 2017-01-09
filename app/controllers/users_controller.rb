@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  # фильтр до определения пользователя
   before_action :set_user, only: [:show, :edit, :update, :destroy]
 
   # GET /users
@@ -29,6 +30,7 @@ class UsersController < ApplicationController
     respond_to do |format|
       if @user.save
         sign_in @user
+        # рендеринг данных - визувлизация xml&json
         format.html { redirect_to @user, notice: 'User was successfully created.' }
         format.json { render :show, status: :created, location: @user }
       else

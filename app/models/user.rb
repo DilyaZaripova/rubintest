@@ -1,19 +1,19 @@
 class User < ApplicationRecord
-  attr_accessor :email, :password, :email.downcase
+  #attr_accessor :email, :password, :email
 
-  #before_save { self.email = email.downcase }
+  before_save { self.email = email.downcase }
 # before_save { email.downcase! } # alternative
   before_create :create_remember_token
 
-  validates :name, presence: true, uniqueness: true, length: { maximum: 50 }
-# validates :email, presence: true, uniqueness: true, length: { maximum: 50 }
+  has_secure_password
 
-# VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
-  validates_format_of :email, with: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/i
-  validates :email, presence: true,
-            uniqueness: { case_sensitive: false }
-  #has_secure_password
-  #validates :password, length: { minimum: 6 }
+  validates_presence_of :name, :email, :password
+  validates_confirmation_of :email, :password
+  validates_length_of :name, maximum: 50, too_long: 'Please, choose a name within 50 chars!'
+  validates_length_of :password, minimum: 6, too_short: 'Please, choose a longer password, 6 chars at least!'
+  validates_format_of :email, with: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/i, on: :create, message: 'Email format is invalid'
+  validates_uniqueness_of :email, case_sensitive: false
+
 
   def User.new_remember_token
     SecureRandom.urlsafe_base64

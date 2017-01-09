@@ -2,10 +2,10 @@ p#notice = notice
 
 .show_user
   .row
-    aside.span4
-      section
+    aside.col-md-4
+      section.user_info
         h1
-          //= gravatar_for @user
+          = gravatar_for @user
           //Применение пакета Gravatar
           = @user.name
 

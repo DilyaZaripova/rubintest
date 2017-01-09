@@ -1,15 +1,16 @@
 User.delete_all
 User.reset_pk_sequence
-User.create(
+User.create!(
     [
-        {name: 'Иван', surname: 'Иванов', email: 'IvanIvanov@mail.ru'},
-        {name: 'Селезнева', surname: 'Анна', email: 'Anna_Sel@bk.ru'}
+        {name: 'Ivan', surname: 'Ivanov', email: 'ivan_ivanov@mail.ru', password: 'ivanivan'},
+        {name: 'Anna', surname: 'Selezneva', email: 'anna_sel@bk.ru', password: 'annaanna'},
+        {name: 'Валерий', surname: 'Глушко', email: 'valeriy@gmail.com', password: 'valeriy'}
     ]
 )
 
 Image.delete_all
 Image.reset_pk_sequence
-Image.create(
+Image.create!(
     [
         {name: 'Мастер и Маргарита', file: '0.jpg', theme_id: 1},
         {name: 'Тихий Дон', file: '1.jpg', theme_id: 1},
@@ -19,7 +20,7 @@ Image.create(
 
 Theme.delete_all
 Theme.reset_pk_sequence
-Theme.create(
+Theme.create!(
     [
         {name: 'Тема_1'},
         {name: 'Тема_2'}
@@ -28,7 +29,7 @@ Theme.create(
 
 Book.delete_all
 Book.reset_pk_sequence
-Book.create(
+Book.create!(
     [
         {user_id: 1, image_id: 1, genre_id: 1, name: 'Мастер и Маргарита', author: 'Михаил Афанасьевич Булгаков
 ', description: 'В произведении — две сюжетные линии, каждая из которых развивается самостоятельно. Действие первой разворачивается в Москве в течение нескольких майских дней (дней весеннего полнолуния) в 30-х гг. XX века, действие же второй происходит тоже в мае, но в городе Ершалаиме (Иерусалиме) почти две тысячи лет тому назад — в самом начале новой эры. Роман построен таким образом, что главы основной сюжетной линии перемежаются главами, составляющими вторую сюжетную линию, причём эти вставные главы являются то главами из романа мастера, то рассказом очевидца событий Воланда.', release: 1940 },
@@ -39,7 +40,7 @@ Book.create(
 
 Genre.delete_all
 Genre.reset_pk_sequence
-Genre.create(
+Genre.create!(
     [
         {name: 'Роман'},
         {name: 'Детектив'},
@@ -51,7 +52,7 @@ Genre.create(
 
 Review.delete_all
 Review.reset_pk_sequence
-Review.create(
+Review.create!(
     [
         {user_id: 1, book_id: 2, text: '"Тихий Дон" одно из самых больших и самых интересных произведений русской литературы .Автор очень подробно рассказывает нам о суровой жизни казаков, для которых честь и семья - самое главное в жизни.
 Есть схожести с не менее великим произведением Н.В. Гоголя "Тарас Бульба". Книга ,конечно, большая и перемещаться с ней будет не удобно, но мне , как человеку который читает дома, нравятся большие книги, это придает им свою, особенную "изюминку" , ведь гораздо солиднее на книжной полке выглядит книга таких размеров, чем маленькие покетбуки.'},
