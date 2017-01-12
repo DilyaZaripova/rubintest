@@ -20,4 +20,19 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  #hello: "Hello world"
+  #shared:
+   #header:
+     logo: "Rubin"
+     logo_title: "Ruby on Rails sample application"
+     sign_up_now: "Sign up now!"
+     main: "Main"
+     about: "About"
+     contacts: "Contacts"
+     help: "Help"
+     sign_in: "Sign in"
+     sign_up: "Sign up"
+     sign_out: "Sign out"
+     person: "Me"
+     profile: "Profile"
+     settings: "Settings"

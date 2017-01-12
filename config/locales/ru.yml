@@ -1,2 +1,17 @@
 ru:
-  hello: "Привет, мир"
+ # hello: "Привет, мир"
+ #shared:
+ # header:
+  logo: "Рубин"
+  logo_title: "Пример приложения на Ruby on Rails"
+  sign_up_now: "Зарегистрируйся сейчас!"
+  main: "Главная"
+  about: "О нас"
+  contacts: "Контакты"
+  help: "Помощь"
+  sign_in: "Авторизуйся"
+  sign_up: "Зарегистрируйся"
+  sign_out: "Выйти"
+  person: "Я"
+  profile: "Профиль"
+  settings: "Настройки"

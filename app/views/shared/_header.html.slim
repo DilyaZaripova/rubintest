@@ -7,6 +7,15 @@ navbar-header
           li =link_to 'About', main_about_path
           li =link_to 'Contacts', main_contacts_path
           li =link_to 'Help', main_help_path
+          //b
+          //= I18n.locale
+          //locale
+          //p.locale
+
+              - #.ru_link
+              = link_to image_tag("Russia.png", alt: "", style: "width: 3%; height: 3%", title: "Русский"), locale: :ru
+              = link_to image_tag("United_Kingdom.png", alt: "", style: "width: 3%; height: 3%", title: "English"), locale: :en
+
         ul.nav.navbar-nav.navbar-right
           - if signed_in?
             li.signed

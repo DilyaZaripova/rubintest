@@ -1,5 +1,5 @@
 class User < ApplicationRecord
-  #attr_accessor :email, :password, :email
+  #attr_accessor :password, :password_confirmation
 
   before_save { self.email = email.downcase }
 # before_save { email.downcase! } # alternative

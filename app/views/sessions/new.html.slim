@@ -1,9 +1,9 @@
-- content_for(:title, 'Log in')
-.content
-h1 Sign in
-
+- content_for(:title, 'Sign in')
 .row-fluid
-  .span6.offset3
+  .col-md-3
+    h1 Sign in
+
+
     = form_for(:session, url: sessions_path) do |f|
       .field
         = f.label :email

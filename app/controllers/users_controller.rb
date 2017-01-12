@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  wrap_parameters :user, include: [:email, :password, :password_confirmation]
   # фильтр до определения пользователя
   before_action :set_user, only: [:show, :edit, :update, :destroy]
 
@@ -72,6 +73,7 @@ class UsersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
-      params.require(:user).permit(:name, :surname, :email)
+      params.require(:user).permit(:name, :surname, :email, :password, :password_confirmation)
     end
+
 end

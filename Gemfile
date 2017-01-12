@@ -64,4 +64,4 @@ group :production do
   # For Heroku deployment
   gem 'rails_12factor'
 end
-gem 'bcrypt'
+gem 'bcrypt', '~> 3.1.7'
