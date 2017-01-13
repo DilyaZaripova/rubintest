@@ -42,6 +42,18 @@ Theme.create!(
     ]
 )
 
+Value.delete_all
+Value.reset_pk_sequence
+Value.create!(
+    [
+        {user_id: 1, image_id: 3, value: 35},
+        {user_id: 2, image_id: 7, value: 95},
+        {user_id: 2, image_id: 5, value: 64},
+        {user_id: 3, image_id: 1, value: 56},
+        {user_id: 3, image_id: 9, value: 88}
+    ]
+)
+
 Book.delete_all
 Book.reset_pk_sequence
 Book.create!(

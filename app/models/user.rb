@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+  has_many :values, dependent: :destroy
   #attr_accessor :password, :password_confirmation
 
   before_save { self.email = email.downcase }
