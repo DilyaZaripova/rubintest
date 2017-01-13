@@ -1,12 +1,15 @@
 .container
-  .col-md-6
-    #select_themes
-    = select_tag :themes, options_from_collection_for_select(@themes, :id, :name)
+    .btn-group
+      button.btn.btn-default type="button"
+          #select_themes
+          = select_tag :themes, options_from_collection_for_select(@themes, :id, :name)
 
 #myCarousel.myCarousel.carousel.slide data-ride="carousel"
   ol.carousel-indicators
-    li.active data-target="#myCarousel" data-slide-to="0"
-    li data-target="#myCarousel" data-slide-to="1"
+    //li.active data-target="#myCarousel" data-slide-to="0"
+    //li data-target="#myCarousel" data-slide-to="1"
+    //li data-target="#myCarousel" data-slide-to="2"
+    //li data-target="#myCarousel" data-slide-to="3"
 
   .carousel-inner role="listbox"
   a.left.carousel-control href="#myCarousel" role="button" data-slide="prev"

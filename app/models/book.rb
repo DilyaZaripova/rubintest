@@ -1,6 +1,6 @@
 class Book < ApplicationRecord
   belongs_to :genre
-  has_many :review
+  has_many :reviews
   belongs_to :image
   belongs_to :user
 

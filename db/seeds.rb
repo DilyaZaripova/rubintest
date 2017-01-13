@@ -12,9 +12,21 @@ Image.delete_all
 Image.reset_pk_sequence
 Image.create!(
     [
-        {name: 'Мастер и Маргарита', file: '0.jpg', theme_id: 1},
-        {name: 'Тихий Дон', file: '1.jpg', theme_id: 1},
-        {name: 'Двеннадцать стульев', file: '2.jpg', theme_id: 2}
+        {name: 'Гарри Поттер и узник Азкабана', file: '0.jpg', theme_id: 5},
+        {name: 'Зеленая миля', file: '1.jpg', theme_id: 4},
+        {name: 'Унесенные ветром', file: '2.jpg', theme_id: 1},
+        {name: 'Буря мечей', file: '3.jpg', theme_id: 5},
+        {name: 'А зори здесь тихие', file: '4.jpg', theme_id: 2},
+        {name: 'Крестный отец', file: '5.jpg', theme_id: 3},
+        {name: 'Властелин колец', file: '6.jpg', theme_id: 5},
+        {name: 'Цветы для Элджерона', file: '7.jpg', theme_id: 4},
+        {name: 'Прислуга', file: '8.jpg', theme_id: 4},
+        {name: 'Убить пересмешника', file: '9.jpg', theme_id: 2},
+        {name: 'Мастер и Маргарита', file: '10.jpg', theme_id: 1},
+        {name: 'Десять негритят', file: '11.jpg', theme_id: 3},
+        {name: 'Денискины рассказы', file: '12.jpg', theme_id: 5},
+        {name: 'Три товарища', file: '13.jpg', theme_id: 1},
+        {name: 'Дары волхвов', file: '14.jpg', theme_id: 1}
     ]
 )
 
@@ -22,8 +34,11 @@ Theme.delete_all
 Theme.reset_pk_sequence
 Theme.create!(
     [
-        {name: 'Тема_1'},
-        {name: 'Тема_2'}
+        {name: 'Роман'},
+        {name: 'Художественная литература'},
+        {name: 'Детектив'},
+        {name: 'Драма'},
+        {name: 'Приключения'}
     ]
 )
 

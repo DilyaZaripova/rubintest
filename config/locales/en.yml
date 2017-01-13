@@ -25,7 +25,7 @@ en:
    #header:
      logo: "Rubin"
      logo_title: "Ruby on Rails sample application"
-     sign_up_now: "Sign up now!"
+     Sign_up_now!: "Sign up now!"
      main: "Main"
      about: "About"
      contacts: "Contacts"
