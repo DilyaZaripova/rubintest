@@ -3,10 +3,10 @@ navbar-header
     .container-fluid
         .navbar-brand =link_to 'Rubin', root_path
         ul.nav.navbar-nav
-          li.active =link_to 'Main', root_path
-          li =link_to 'About', main_about_path
-          li =link_to 'Contacts', main_contacts_path
-          li =link_to 'Help', main_help_path
+          li.active =link_to t('main'), root_path
+          li =link_to t('about'), main_about_path
+          li =link_to t('contacts'), main_contacts_path
+          li =link_to t('help'), main_help_path
           //p.locale
 
             //- #.ru_link
@@ -27,11 +27,11 @@ navbar-header
                   = ' '
                 b.caret
               ul.dropdown-menu
-                li= link_to 'Profile', current_user
-                li= link_to 'Edit', edit_user_path(current_user)
+                li= link_to t('profile'), current_user
+                li= link_to t('edit'), edit_user_path(current_user)
                 li.divider
                 li
-                  = link_to 'Sign out', signout_path, method: :delete
+                  = link_to t('sign_out'), signout_path, method: :delete
           - else
             //p.locale
               - #.ru_link
@@ -39,6 +39,6 @@ navbar-header
             /'
             //= link_to image_tag("United_Kingdom.png", alt: "", style: "width: 3%; height: 3%", title: "English"), locale: :en
             li
-              = link_to 'Sign in', signin_path
+              = link_to t('sign_in'), signin_path
             li
-              = link_to 'Sign up', signup_path
+              = link_to t('sign_up'), signup_path

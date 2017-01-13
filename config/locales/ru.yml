@@ -4,7 +4,7 @@ ru:
   #header:
   logo: "Рубин"
   logo_title: "Пример приложения на Ruby on Rails"
-  Sign_up_now!: "Зарегистрируйся сейчас!"
+  now: "Зарегистрируйся сейчас!"
   main: "Главная"
   about: "О нас"
   contacts: "Контакты"
@@ -13,5 +13,6 @@ ru:
   sign_up: "Зарегистрируйся"
   sign_out: "Выйти"
   person: "Я"
-  profile: "Профиль"
-  settings: "Настройки"
+  edit: "Профиль"
+  settings: "Редактировать"
+  all_rights_reserved: "Все права защищены"
