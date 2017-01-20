@@ -1,8 +1,8 @@
 .container
-    .btn-group
-      button.btn.btn-default type="button"
-          #select_themes
-          = select_tag :themes, options_from_collection_for_select(@themes, :id, :name)
+  .btn-group
+    button.btn.btn-default type="button"
+      #select_themes
+        = select_tag :themes, options_from_collection_for_select(@themes, :id, :name)
 
 #myCarousel.myCarousel.carousel.slide data-ride="carousel"
   ol.carousel-indicators
