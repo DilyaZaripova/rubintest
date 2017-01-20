@@ -9,4 +9,10 @@ class WorksController < ApplicationController
       format.json { render json: @images }
     end
   end
+
+  def show_images
+    @images.each do |image|
+      puts image_path("pictures/")
+    end
+  end
 end
