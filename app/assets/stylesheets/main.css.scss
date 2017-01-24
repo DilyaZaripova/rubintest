@@ -1,10 +1,17 @@
+* {
+  margin: 0;
+  padding: 0;
+}
 body {
   background-color: #fff;
-  color: #333;
+  color:grey;
+  //text-shadow: grey 0 1px 0;
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
   //line-height: 18px;
   //margin: 33px;
+  background-image:url(bg-0.jpg);
+  height: 100%;
 }
 
 p, ol, ul, td {
@@ -21,15 +28,15 @@ pre {
 }
 
 a {
-  color: #000;
+  color:#fff;
 
   &:visited {
-    color: #666;
+    color: #fff;
   }
 
   &:hover {
     color: #fff;
-    background-color: #000;
+    background-color: steelblue;
   }
 }
 
@@ -81,22 +88,38 @@ div {
   ul li {
     font-size: 12px;
     list-style: square;
+    color: #fff;
   }
 }
 
 label {
   display: block;
 }
-
+.navbar-default .navbar-nav > li > a {
+  color:#fff;
+}
+.navbar-default .navbar-nav > .active > a{
+  color:grey;
+}
+.navbar-brand{
+  &:visited {
+    background:steelblue;
+  }
+}
 .navbar-header {
-  //padding: 10px;
-  margin-left: 5%;
-  margin-top: 0;
+  //height: 70px;
+  //left: 0; top: 0;
+  background: steelblue;
+  color:white;
+  width: 100%;
 }
 .navbar-footer {
+  position: fixed;
+  left: 0; bottom: 0;
   padding: 10px;
-  margin-left: 5%;
-  margin-top: 0;
+  background: steelblue;
+  color: #fff;
+  width: 100%;
 }
 .center.jumbotron {
   padding: 10px;

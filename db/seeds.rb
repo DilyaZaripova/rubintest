@@ -65,17 +65,6 @@ Book.create!(
     ]
 )
 
-Genre.delete_all
-Genre.reset_pk_sequence
-Genre.create!(
-    [
-        {name: 'Роман'},
-        {name: 'Детектив'},
-        {name: 'Приключения'},
-        {name: 'Фантастика'},
-        {name: 'Учебная литература'}
-    ]
-)
 
 Review.delete_all
 Review.reset_pk_sequence

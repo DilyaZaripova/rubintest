@@ -10,9 +10,5 @@ class WorksController < ApplicationController
     end
   end
 
-  def show_images
-    @images.each do |image|
-      puts image_path("pictures/")
-    end
-  end
+
 end

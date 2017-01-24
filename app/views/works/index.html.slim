@@ -1,8 +1,9 @@
 .container
-    .btn-group
-      button.btn.btn-default type="button"
-          #select_themes
-          = select_tag :themes, options_from_collection_for_select(@themes, :id, :name)
+  h3 Выбери категорию и книгу:
+  .btn-group
+    button.btn.btn-default type="button"
+      #select_themes
+      = select_tag :themes, options_from_collection_for_select(@themes, :id, :name)
 
 #myCarousel.myCarousel.carousel.slide data-ride="carousel"
   ol.carousel-indicators
@@ -19,14 +20,9 @@
     span.glyphicon.glyphicon-chevron-right aria-hidden="true"
     span.sr-only Next
 
+
 table.table.table-bordered
-  thead
-    tr
-      th Имя
-      th Фамилия
-      th Почта
-  tbody
-    tr
-      td Иван
-      td Николайчук
-      td ivan@example.com
+  tr
+    th
+     // -Image.pluck(:file).each do |image|
+       =image_tag("pictures/"+image)
