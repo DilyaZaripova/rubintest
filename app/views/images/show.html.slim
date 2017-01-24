@@ -1,18 +1,41 @@
 p#notice = notice
+.row
+  .col-md-4
+    p
+      = image_tag('/assets/pictures/'+@image.file)
+  .col-md-4
+    p
+      strong Название:
+      = @image.name
+    p
+      strong Описание:
+    //= @book.description
+    p
 
-p
-  strong Name:
-  = @image.name
-p
-  strong File:
-  = @image.file
-p
-  strong Ave value:
-  = @image.ave_value
-p
-  strong Theme:
-  = @image.theme_id
+      = link_to 'Back', works_index_path
+  .col-md-4
+    p
 
-= link_to 'Edit', edit_image_path(@image)
-'|
-= link_to 'Back', images_path
+    h4   Оцени книгу
+    = form_for :values, url: values_path, remote: true, html: {id: 'rate-form'} do |f|
+        //= f.label :value_1, class: 'rate-label'
+        //= f.radio_button :value, '1'
+        .glyphicon.glyphicon-star-empty
+        //= f.label :value_2, class: 'rate-label'
+        //= f.radio_button :value, '2'
+        .glyphicon.glyphicon-star-empty
+        //= f.label :value_3, class: 'rate-label'
+        //= f.radio_button :value, '3'
+        .glyphicon.glyphicon-star-empty
+        //= f.label :value_4, class: 'rate-label'
+        //= f.radio_button :value, '4'
+        .glyphicon.glyphicon-star-empty
+        //= f.label :value_5, class: 'rate-label'
+        //= f.radio_button :value, '5'
+        .glyphicon.glyphicon-star-empty
+        = f.hidden_field :image_id
+        .actions
+          = f.submit 'Сохранить', class: 'btn btn-large btn-primary'
+    p
+    strong Оценка:
+    = @image.ave_value

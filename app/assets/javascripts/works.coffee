@@ -5,8 +5,9 @@ $ ->
       success: (data) ->
         box = $ '.carousel-inner'
         box.empty()
-        data.forEach (file) ->
-          box.append "<div class='item'><img src='/assets/pictures/#{file}'></div>"
+        console.log(data)
+        data.forEach (image) ->
+          box.append "<div class='item'><a href='/images/#{image.id}'><img src='/assets/pictures/#{image.file}'></a></div>"
         $($('.item')[0]).addClass('active')
   $('select').change change_trigger
   change_trigger $('select')

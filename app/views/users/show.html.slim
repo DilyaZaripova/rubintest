@@ -2,19 +2,21 @@ p#notice = notice
 
 .show_user
   .container
-    aside.col-md-6
+    .col-md-4
       section.user_info
         h1
           = gravatar_for @user
           //Применение пакета Gravatar
           = @user.name
+          h4
 
-        p
+          p
           = @user.email
-        p
+          p
           = link_to :work, works_index_path, class: "btn btn-lg btn-primary"
-        p
+          p
           = link_to 'Edit', edit_user_path(@user)
-        p
-          'Мои фильмы
+    .col-md-4
+      p
+       h4 Мои фильмы
 
