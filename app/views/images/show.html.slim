@@ -1,7 +1,7 @@
 p#notice = notice
 .row
   .col-md-4
-    p
+    p.text-right
       = image_tag('/assets/pictures/'+@image.file)
   .col-md-4
     p
@@ -9,7 +9,7 @@ p#notice = notice
       = @image.name
     p
       strong Описание:
-    //= @book.description
+      = @book.description
     p
 
       = link_to 'Back', works_index_path
