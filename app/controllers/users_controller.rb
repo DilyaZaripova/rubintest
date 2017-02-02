@@ -12,6 +12,8 @@ class UsersController < ApplicationController
   # GET /users/1
   # GET /users/1.json
   def show
+    @book = Book.find(params[:id])
+    @books = Book.all
   end
 
   # GET /users/new

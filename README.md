@@ -23,13 +23,10 @@
 | book |         |          |
 |      | user_id   |          |
 |     | image_id   |          |
-|     | genre_id   |          |
 |     | name   |          |
 |     | author   |          |
 |     | description   |          |
 |     | release   |          |
-| genre |      |          |
-|       | name |          |
 | review |     |          |
 |        | user_id |          |
 |        | book_id |          |

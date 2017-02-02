@@ -18,19 +18,13 @@ ActiveRecord::Schema.define(version: 20170106181708) do
   create_table "books", force: :cascade do |t|
     t.integer  "user_id"
     t.integer  "image_id"
-    t.integer  "genre_id"
+    t.integer  "theme_id"
     t.string   "name"
     t.string   "author"
     t.string   "description"
     t.integer  "release"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
-  end
-
-  create_table "genres", force: :cascade do |t|
-    t.string   "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
   end
 
   create_table "images", force: :cascade do |t|

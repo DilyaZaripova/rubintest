@@ -1,11 +1,12 @@
-navbar-footer
-  nav.navbar.navbar-default.navbar-fixed-bottom
-    .container-fluid
-      ul.nav.navbar-nav
-        p All rights reserved &copy;  2017
-      ul.nav.navbar-nav.navbar-right
-      = link_to image_tag("Russia.png", alt: "", style: "width: 3%; height: 3%", title: "Русский"), locale: :ru
-      '
-      = link_to image_tag("United_Kingdom.png", alt: "", style: "width: 3%; height: 3%", title: "English"), locale: :en
-      b
-      = I18n.locale
+.navbar-fixed-bottom.row-fluid.navbar-footer
+  .navbar-inner
+    .container
+      p All rights reserved &copy;  2017
+      p.locale
+
+        //- #.ru_link
+        = link_to image_tag("Russia.png", alt: "", style: "width: 3%; height: 13%", title: "Русский"), locale: :ru
+        '
+        = link_to image_tag("United_Kingdom.png", alt: "", style: "width: 3%; height: 3%", title: "English"), locale: :en
+        b
+          = I18n.locale

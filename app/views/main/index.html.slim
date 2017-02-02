@@ -3,7 +3,7 @@
   h2.text-center =t('logo_title')
 
   - if signed_in?
-    .text-center = link_to 'Proceed to work!', works_index_path, class: 'btn btn-lg btn-primary'
+    .text-center = link_to t('work'), works_index_path, class: 'btn btn-lg btn-primary'
 
   - else
-    .text-center = link_to 'Sign up now', signup_path, class: 'btn btn-lg btn-primary'
+    .text-center = link_to t('now'), signup_path, class: 'btn btn-lg btn-primary'

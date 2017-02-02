@@ -13,7 +13,6 @@ Rails.application.routes.draw do
 
   resources :books
   resources :reviews
-  resources :genres
   resources :users
   resources :values
   resources :images
